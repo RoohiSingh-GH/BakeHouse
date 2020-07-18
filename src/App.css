@@ -3,15 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --mainColor: #f57224;
   --whiteColor: #fff;
   --blackColor: #000;
   --lightDark: #222;
 }
+
 body {
   font-family: "Lato", sans-serif;
 }
+
 /*Navebar Styles*/
 nav {
   width: 100%;
@@ -23,31 +26,38 @@ nav {
   position: fixed;
   top: 0;
 }
+
 nav .right {
   text-align: right;
   width: 50%;
 }
+
 nav .left {
   text-align: left;
   width: 50%;
 }
+
 .left a {
   font-weight: 700;
   color: var(--mainColor);
   font-size: 21px;
 }
+
 nav ul {
   list-style: none;
 }
+
 nav ul a {
   text-decoration: none;
 }
+
 .shoppingCart i {
   font-size: 20px;
   display: inline-block;
   color: var(--lightDark);
   margin-right: 15px;
 }
+
 .cartCount {
   display: inline-block;
   width: 35px;
@@ -59,17 +69,44 @@ nav ul a {
   text-align: center;
   font-size: 12px;
 }
-/*Helpers*/
+
+/*Banner styles*/
 .container {
   width: 100%;
-  padding: 0 100%;
+  padding: 0 104px;
 }
-/*Banner styles*/
+
 header {
   width: 100%;
-  background: url("./assets/vegetables.jpg");
   height: 250px;
-  margin-top: 70px;
+  background: url("./assets/vegetables.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 70px;
   display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 0 105px;
+  position: relative;
+  color: #fff;
+}
+
+header .headerText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+header h1 {
+  margin-bottom: 7px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #ffff;
 }
