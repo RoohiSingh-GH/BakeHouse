@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../Global/ProductContent";
+import Banner from "./Banner";
 
 const Products = () => {
   const { product } = useContext(ProductContext);
   return (
-    <>
+    <div className="container">
+      <Banner />
       <div className="products" style={{ marginTop: "30px" }}>
         {product.map((product) => (
           <div className="product" key={product.id}>
@@ -24,7 +26,7 @@ const Products = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 export default Products;

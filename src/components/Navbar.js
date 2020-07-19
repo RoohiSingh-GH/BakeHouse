@@ -1,21 +1,21 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
       <ul className="left">
         <li>
-          <a href="">Bakehouse</a>
+          <Link to="/">Bakehouse</Link>
         </li>
       </ul>
       <ul className="right">
         <li>
-          <a href="">
+          <Link to="cart">
             <span className="shoppingCart">
               <i class="fas fa-cart-arrow-down"></i>
               <span className="cartCount">0</span>
             </span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

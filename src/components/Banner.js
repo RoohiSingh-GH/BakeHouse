@@ -2,15 +2,13 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container">
-      <header style={{ marginTop: "70px" }}>
-        <div className="headerText">
-          <div>
-            <p>Enjoy online shopping</p>
-          </div>
+    <header style={{ marginTop: "70px" }}>
+      <div className="headerText">
+        <div>
+          <p>Enjoy online shopping</p>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 export default Banner;
