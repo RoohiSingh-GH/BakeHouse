@@ -54,8 +54,13 @@ const Cart = () => {
               <div className="justtitle">Total Price</div>
               <div className="itemprice">${totalPrice}.00</div>
             </div>
-            <div className="stripesection">{/*stripe button*/}</div>
           </div>
+          <button
+            className="purchasebutton"
+            onClick={() => alert("Thank you for purchasing")}
+          >
+            Purchase
+          </button>
         </div>
       ) : (
         ""
