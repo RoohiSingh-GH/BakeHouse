@@ -42,6 +42,24 @@ const Cart = () => {
             ))
           : "Sorry your cart is currently empty"}
       </div>
+      {shoppingCart.length > 0 ? (
+        <div className="cartSummary">
+          <div className="summary">
+            <h3>Cart Summary</h3>
+            <div className="totalitems">
+              <div className="items">Total Items</div>
+              <div className="itemCount">{qty}</div>
+            </div>
+            <div className="totalpricesection">
+              <div className="justtitle">Total Price</div>
+              <div className="itemprice">${totalPrice}.00</div>
+            </div>
+            <div className="stripesection">{/*stripe button*/}</div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
