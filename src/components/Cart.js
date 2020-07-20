@@ -14,15 +14,28 @@ const Cart = () => {
                 </span>
                 <span className="cartproductname">{cart.name}</span>
                 <span className="cartproductprice">${cart.price}.00</span>
-                <span className="inc">
+                <span
+                  className="inc"
+                  onClick={() => dispatch({ type: "INC", id: cart.id, cart })}
+                >
                   <i className="fas fa-plus"></i>
                 </span>
                 <span className="productQuantity">{cart.qty}</span>
-                <span className="dec">
+                <span
+                  className="dec"
+                  onClick={() => dispatch({ type: "DEC", id: cart.id, cart })}
+                >
                   <i className="fas fa-minus"></i>
                 </span>
-                <span className="productTotalPrice">500</span>
-                <span className="delete">
+                <span className="productTotalPrice">
+                  ${cart.price * cart.qty}.00
+                </span>
+                <span
+                  className="delete"
+                  onClick={() =>
+                    dispatch({ type: "DELETE", id: cart.id, cart })
+                  }
+                >
                   <i className="fas fa-trash"></i>
                 </span>
               </div>
