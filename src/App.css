@@ -112,6 +112,7 @@ header h1 {
   text-transform: uppercase;
   color: #ffff;
 }
+
 /*Product styles*/
 .products {
   display: flex;
@@ -333,24 +334,14 @@ header h1 {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.navbar {
-  display: flex;
-  align-items: center;
 
-  background: rebeccapurple;
-  color: white;
-  font-family: Helvetica;
-  font-weight: 300;
-}
-
-.navbar__title {
-  margin-right: auto;
-  font-size: 150%;
-  padding: 12px 16px;
-}
-
-.navbar__item {
-  padding: 16px 16px;
-  cursor: pointer;
-  vertical-align: middle;
+.mainbanner {
+  width: 100%;
+  height: 300px;
+  background: url("./assets/store.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
 }
