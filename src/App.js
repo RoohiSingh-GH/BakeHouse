@@ -1,29 +1,22 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-
-import ProductContextProvider from "./Global/ProductContent";
-import CartContextProvider from "./Global/CartContext";
+import Navbarmain from "./components/navbarmain";
+import Store from "./Store";
+import navbarmain from "./components/navbarmain";
 import Products from "./components/Products";
-import Cart from "./components/Cart";
-import Notfound from "./components/Notfound";
 
 function App() {
   return (
     <div>
-      <ProductContextProvider>
-        <CartContextProvider>
-          <Router>
-            <Navbar></Navbar>
-            <Switch>
-              <Route path="/" exact component={Products} />
-              <Route path="/cart" exact component={Cart} />
-              <Route component={Notfound} />
-            </Switch>
-          </Router>
-        </CartContextProvider>
-      </ProductContextProvider>
+      <Router>
+        <Navbarmain></Navbarmain>
+
+        <Switch>
+          <Route path="/" exact component={navbarmain} />
+          <Route path="/store" exact component={Store} />
+        </Switch>
+      </Router>
     </div>
   );
 }
