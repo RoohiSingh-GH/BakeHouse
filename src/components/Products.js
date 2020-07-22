@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ProductContext } from "../Global/ProductContent";
 import { CartContext } from "../Global/CartContext";
-import Banner from "./Banner";
+
 
 const Products = () => {
   const { product } = useContext(ProductContext);
@@ -9,7 +9,7 @@ const Products = () => {
 
   return (
     <div className="container">
-      <Banner />
+    
       <div className="products" style={{ marginTop: "30px" }}>
         {product.map((product) => (
           <div className="product" key={product.id}>
