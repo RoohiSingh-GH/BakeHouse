@@ -4,20 +4,21 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Store from "./Store";
 import RecipeApp from "./RecipeApp";
 import NavbarMain from "./components/navbarmain";
-import Mainbanner from "./components/Mainbanner";
+import Banner from "./components/Banner";
+import Quiz from "./QuizApp";
 function App() {
   return (
     <div>
-      <Mainbanner />
       <Router>
         <NavbarMain></NavbarMain>
         <Switch>
           <Route path="/" exact component={NavbarMain} />
           <Route path="/store" exact component={Store} />
-          <Route path="/" exact component={NavbarMain} />
           <Route path="/recipe" exact component={RecipeApp} />
+          <Route path="/quiz" exact component={Quiz} />
         </Switch>
       </Router>
+      <Banner />
     </div>
   );
 }
