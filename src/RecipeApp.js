@@ -5,11 +5,11 @@ import Recipes from "./components/Recipes";
 import Axios from "axios";
 
 function App() {
-  const [search, setSerach] = useState("chiken");
+  const [search, setSerach] = useState("chicken");
   const [recipes, setRecipes] = useState([]);
 
-  const APP_ID = "cb11d027";
-  const APP_KEY = "efd6b44451530620c929bebdea09772d";
+  const APP_ID = "7bba8a1d";
+  const APP_KEY = "12400253b0c7589d17fc96b064cc4c51";
 
   useEffect(() => {
     getRecipes();
@@ -22,7 +22,7 @@ function App() {
     setRecipes(res.data.hits);
   };
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     setSerach(e.target.value);
   };
 

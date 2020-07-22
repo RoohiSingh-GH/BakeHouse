@@ -11,6 +11,7 @@ const navbarmain = () => {
       <ul className="right">
         <li>
           <Link to="/store">Store</Link>
+          <Link to="/recipe">Recipe</Link>
         </li>
       </ul>
     </nav>

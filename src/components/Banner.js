@@ -5,7 +5,7 @@ const Banner = () => {
     <header style={{ marginTop: "70px" }}>
       <div className="headerText">
         <div>
-          <p>Enjoy online shopping</p>
+          <p>Have a great Time</p>
         </div>
       </div>
     </header>
