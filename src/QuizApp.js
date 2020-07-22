@@ -8,7 +8,7 @@ class MainQuiz extends React.Component {
     options: [],
     score: 0,
     disabled: true,
-    isEnd: false
+    isEnd: false,
   };
 
   loadQuizData = () => {
@@ -17,7 +17,7 @@ class MainQuiz extends React.Component {
       return {
         questions: quizData[this.state.currentQuestion].question,
         answer: quizData[this.state.currentQuestion].answer,
-        options: quizData[this.state.currentQuestion].options
+        options: quizData[this.state.currentQuestion].options,
       };
     });
   };
@@ -31,12 +31,12 @@ class MainQuiz extends React.Component {
 
     if (myAnswer === answer) {
       this.setState({
-        score: score + 1
+        score: score + 1,
       });
     }
 
     this.setState({
-      currentQuestion: this.state.currentQuestion + 1
+      currentQuestion: this.state.currentQuestion + 1,
     });
     console.log(this.state.currentQuestion);
   };
@@ -48,24 +48,24 @@ class MainQuiz extends React.Component {
           disabled: true,
           questions: quizData[this.state.currentQuestion].question,
           options: quizData[this.state.currentQuestion].options,
-          answer: quizData[this.state.currentQuestion].answer
+          answer: quizData[this.state.currentQuestion].answer,
         };
       });
     }
   }
   //check answer
-  checkAnswer = answer => {
+  checkAnswer = (answer) => {
     this.setState({ myAnswer: answer, disabled: false });
   };
   finishHandler = () => {
     if (this.state.currentQuestion === quizData.length - 1) {
       this.setState({
-        isEnd: true
+        isEnd: true,
       });
     }
     if (this.state.myAnswer === this.state.answer) {
       this.setState({
-        score: this.state.score + 1
+        score: this.state.score + 1,
       });
     }
   };
@@ -92,9 +92,10 @@ class MainQuiz extends React.Component {
       return (
         <div className="App">
           <h1>{this.state.questions} </h1>
-          <span>{`Questions ${currentQuestion}  out of ${quizData.length -
-            1} remaining `}</span>
-          {options.map(option => (
+          <span>{`Questions ${currentQuestion}  out of ${
+            quizData.length - 1
+          } remaining `}</span>
+          {options.map((option) => (
             <p
               key={option.id}
               className={`ui floating message options

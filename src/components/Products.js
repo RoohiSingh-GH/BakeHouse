@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { ProductContext } from "../Global/ProductContent";
 import { CartContext } from "../Global/CartContext";
 
-
 const Products = () => {
   const { product } = useContext(ProductContext);
   const { dispatch } = useContext(CartContext);
 
   return (
     <div className="container">
-    
       <div className="products" style={{ marginTop: "30px" }}>
         {product.map((product) => (
           <div className="product" key={product.id}>
