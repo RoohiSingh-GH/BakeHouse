@@ -1,6 +1,7 @@
 import React from "react";
 import { quizData } from "./quizData";
 import NavbarMain from "./components/navbarmain";
+import "./App.css";
 
 class MainQuiz extends React.Component {
   state = {
@@ -76,17 +77,7 @@ class MainQuiz extends React.Component {
     if (isEnd) {
       return (
         <div className="result">
-          <h3>Game Over your Final score is {this.state.score} points </h3>
-          <div>
-            The correct answer's for the questions was
-            <ul>
-              {quizData.map((item, index) => (
-                <li className="ui floating message options" key={index}>
-                  {item.answer}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3>Final score is {this.state.score} points </h3>
         </div>
       );
     } else {
