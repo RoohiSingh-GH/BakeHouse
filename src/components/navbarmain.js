@@ -8,11 +8,12 @@ const navbarmain = () => {
           <Link to="/">Bakehouse</Link>
         </li>
       </ul>
-      <ul className="right">
+      <ul className="right" id="Nav_menu">
         <li>
           <Link to="/store">Store</Link>
           <Link to="/recipe">Recipe</Link>
           <Link to="/quiz">Quiz</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import { quizData } from "./quizData";
+import NavbarMain from "./components/navbarmain";
 
 class MainQuiz extends React.Component {
   state = {
@@ -91,6 +92,7 @@ class MainQuiz extends React.Component {
     } else {
       return (
         <div className="App">
+          <NavbarMain />
           <h1>{this.state.questions} </h1>
           <span>{`Questions ${currentQuestion}  out of ${
             quizData.length - 1

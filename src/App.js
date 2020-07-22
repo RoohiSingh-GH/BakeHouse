@@ -6,6 +6,7 @@ import RecipeApp from "./RecipeApp";
 import NavbarMain from "./components/navbarmain";
 import Banner from "./components/Banner";
 import Quiz from "./QuizApp";
+import Contact from "./Contact";
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/store" exact component={Store} />
           <Route path="/recipe" exact component={RecipeApp} />
           <Route path="/quiz" exact component={Quiz} />
+          <Route path="/contact" exact component={Contact} />
         </Switch>
       </Router>
       <Banner />

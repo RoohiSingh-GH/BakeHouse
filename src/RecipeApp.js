@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./RecipeApp.css";
+import Navmainbar from "./components/navbarmain";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import Axios from "axios";
@@ -31,6 +32,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Navmainbar></Navmainbar>
       <Header
         search={search}
         onInputChange={onInputChange}
